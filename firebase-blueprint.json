@@ -1,0 +1,66 @@
+{
+  "collections": [
+    {
+      "name": "users",
+      "description": "User profiles and metadata",
+      "fields": [
+        { "name": "uid", "type": "string", "description": "Firebase Auth UID" },
+        { "name": "displayName", "type": "string" },
+        { "name": "photoURL", "type": "string" },
+        { "name": "username", "type": "string" },
+        { "name": "walletBalance", "type": "number" },
+        { "name": "createdAt", "type": "timestamp" }
+      ]
+    },
+    {
+      "name": "chats",
+      "description": "Chat rooms",
+      "fields": [
+        { "name": "participants", "type": "array" },
+        { "name": "lastMessage", "type": "string" },
+        { "name": "lastTimestamp", "type": "timestamp" }
+      ]
+    },
+    {
+      "name": "messages",
+      "description": "Messages within chats",
+      "fields": [
+        { "name": "chatId", "type": "string" },
+        { "name": "senderId", "type": "string" },
+        { "name": "text", "type": "string" },
+        { "name": "timestamp", "type": "timestamp" }
+      ]
+    },
+    {
+      "name": "stories",
+      "description": "Streetwear stories",
+      "fields": [
+        { "name": "userId", "type": "string" },
+        { "name": "imageUrl", "type": "string" },
+        { "name": "createdAt", "type": "timestamp" },
+        { "name": "expiresAt", "type": "timestamp" }
+      ]
+    },
+    {
+      "name": "streams",
+      "description": "Live stream metadata",
+      "fields": [
+        { "name": "hostId", "type": "string" },
+        { "name": "title", "type": "string" },
+        { "name": "viewerCount", "type": "number" },
+        { "name": "status", "type": "string" }
+      ]
+    },
+    {
+      "name": "transactions",
+      "description": "Wallet transactions",
+      "fields": [
+        { "name": "userId", "type": "string" },
+        { "name": "amount", "type": "number" },
+        { "name": "type", "type": "string" },
+        { "name": "description", "type": "string" },
+        { "name": "timestamp", "type": "timestamp" }
+      ]
+    }
+  ]
+}

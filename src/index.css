@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand: #0066FF; /* Clean Blue */
+  --color-caution: #FFDD00; /* Yellow */
+  --color-success: #00CC66;
+  --color-bg: #FFFFFF; /* White Background */
+  --color-fg: #000000; /* Black text for clarity */
+  
+  --border-width-2: 2px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+  }
+  
+  /* Simplified modern styling */
+  .brutalist-card {
+    @apply bg-white border-2 border-brand shadow-[4px_4px_0px_0px_#FFDD00] transition-transform active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#FFDD00];
+  }
+
+  .brutalist-button {
+    @apply bg-brand text-white font-bold px-4 py-2 border-2 border-brand hover:bg-white hover:text-brand transition-colors uppercase tracking-tight;
+  }
+
+  .brutalist-button-primary {
+    @apply bg-brand text-white border-2 border-brand shadow-[4px_4px_0px_0px_#FFDD00] hover:bg-caution hover:text-brand transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#FFDD00];
+  }
+
+  .brutalist-input {
+    @apply border-2 border-brand px-3 py-2 focus:outline-none focus:ring-0 focus:border-caution bg-white text-black font-mono;
+  }
+  
+  .brutalist-header {
+    @apply border-b-2 border-brand bg-white sticky top-0 z-50 px-4 py-3 flex items-center justify-between text-brand;
+  }
+
+  .street-text {
+    @apply font-sans font-bold uppercase tracking-tight;
+  }
+
+  .mono-text {
+    @apply font-mono uppercase tracking-tight;
+  }
+}
+

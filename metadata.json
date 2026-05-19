@@ -1,0 +1,6 @@
+{
+  "name": "SYNC",
+  "description": "Streetwear-themed social chat app with stories, live streaming, wallet integration, and AI assistant.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
